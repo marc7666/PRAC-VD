@@ -17,8 +17,39 @@
 \thispagestyle{empty}
 \tableofcontents
 \thispagestyle{empty}
-\listoffigures
-\thispagestyle{empty}
 \newpage
 \pagenumbering{arabic}
+\section*{Justificació de l'elecció del dataset}
+\addcontentsline{toc}{section}{Justificació de l'elecció del dataset}
+Per conviccions personals, la temàtica de les dades a estudiar podia ser o bé contaminació atmosfèrica o bé, fe i religió.\\
+En un primer moment, la intenció era buscar un conjunt de dades sobre la temàtica de fe i religió, per la qual cosa s'ha recorregut a fonts de dades com Kaggle, l'INE, l'IDESCAT, datos.gob.es o dades obertes de la Generalitat de Catalunya. Després d'investigar tots aquests repositoris de dades, s'ha descartat aquesta temàtica perquè les dades trobades no eren adients ja fos per la seva pobresa en nombre de variables (columnes del \textit{dataset}), per la seva pobresa en nombre de lectures (registres/files del conjunt), per la ubicació geogràfica en la qual han estat recollides les dades (la majoria als Estats Units d'Amèrica) o bé perquè no eren capaces de respondre a les preguntes que es tenien al cap.\\
+Un cop descartada la temàtica espiritual i religiosa, s'ha cercat un altre tema d'interès. Un altre tema d'interès personal, és la contaminació atmosfèrica. Aquest tema té una gran rellevància a escala personal, pel fet de patir una afecció respiratòria com és l'asma. A més, el tema de la contaminació atmosfèrica també provoca una gran preocupació a nivell personal com a amant de la natura. Tenint en compte la preocupació i que l'afecció asmàtica és manifesta més sovint quan hi ha més contaminació a l'aire, s'ha començat a cercar dades sobre la contaminació atmosfèrica en el repositori de dades del govern d'Espanya, fins que s'ha trobat el conjunt de dades \textit{Calidad del aire en los puntos de medida automáticos de Vigilancia y Previsión de la Contaminación Atmosférica} \hyperref[ref:dades_gob_esp]{[Ref.1]}. En aquest web s'hi pot trobar l'enllaç que condueix al conjunt de dades en el repositori de dades obertes de la Generalitat de Catalunya \hyperref[ref:dades_cat]{[Ref.2]}. En aquest portal de dades català, s'hi pot trobar informació sobre el conjunt de dades: l'última data d'actualització de les dades, l'organisme distribuïdor de les dades, una petita descripció del \textit{dataset}, la llicència de publicació, el nombre de files i de columnes del conjunt de dades, una descripció de les columnes així com el seu tipus, etc.\\
+Informació bàsica del dataset:
+\begin{itemize}
+    \item Nombre de files: 3,5 milions $\rightarrow$ Per evitar tractar amb tantes dades s'aplicarà un filtre per no tractar dades més enrere del 2015.
+    \item Nombre de columnes: 40
+    \item Data de creació de les dades: 18 de març de 2020
+    \item Darrera actualització de les dades: 20 de novembre de 2025
+\end{itemize}
+És important de cara als aspectes legals destacar que aquest conjunt de dades distribuït pel Departament de Territori, Habitatge i Transició Ecològica de la Generalitat de Catalunya es publica sota la llicència oberta d'ús d'informació - Catalunya.
+
+\section*{Rellevància del conjunt de dades}
+\addcontentsline{toc}{section}{Rellevància del conjunt de dades}
+Les dades escollides per dur a terme la pràctica final de l'assignatura, són dades compreses entre l'1 de gener del 1991 fins al 17 de novembre de 2025 i contenen un total de 40 columnes i 3.502.657 de registres. Per evitar tractar amb dades excessivament antigues, s'aplicarà un filtre al conjunt de dades per no tractar amb dades més enrere de l'any 2015. Amb aquest filtratge aplicat, el nombre de registres es redueix a 1.443.240, una dada molt més manejable que els més de 3 milions de registres anteriors.\\
+Com s'ha esmentat anteriorment, el tema tractat per aquest conjunt de dades, és la contaminació atmosfèrica, un fenomen molt important per al col·lectiu de tota la humanitat i la seva supervivència. Concretament, es mesuren els contaminants: $PM_{2.5}$, $NO_{2}$, $NO_{x}$, $O_{3}$, CO, NO, $SO_{2}$, $PM_{10}$, $PM_{1}$, $H_{2}S$, Hg, $C_{6}H_{6}$ i $Cl_{2}$ a cada hora del dia que es realitza la mesura (1 columna per hora).\\
+En aquest context, la perspectiva de gènere no és aplicable.
+
+\section*{Bibliografia}
+\addcontentsline{toc}{section}{Bibliografia}
+[Ref.1] \label{ref:dades_gob_esp} \textit{Calidad del aire en los puntos de medida automáticos de la Red de Vigilancia y Previsión de la Contaminació Atmosférica} [en línia] [consulta: 20 de novembre de 2025] Disponible a: \sloppy\href{https://datos.gob.es/es/catalogo/a09002970-calidad-del-aire-en-los-puntos-de-medida-automaticos-de-la-red-de-vigilancia-y-prevision-de-la-contaminacio-atmosferica}{https://datos.gob.es/es/catalogo/a09002970-calidad-del-aire-en-los-puntos-de-medida-automaticos-de-la-red-de-vigilancia-y-prevision-de-la-contaminacio-atmosferica} \textbf{$\rightarrow$ Repositòri de dades del gobern d'Espanya.} \newline
+[Ref.2] \label{ref:dades_cat} Generalitat de Catalunya. Departament de Territori, Habitatge i Transició Ecològica. \textit{Qualitat de l'aire als punts de mesurament automàtics de la Xarxa de Vigilància i Previsió de la Contaminació Atmosfèrica} [base de dades en línia] [consulta: 20 de novembre de 2025] Disponible a: \href{https://analisi.transparenciacatalunya.cat/Medi-Ambient/Qualitat-de-l-aire-als-punts-de-mesurament-autom-t/tasf-thgu/about_data}{https://analisi.transparenciacatalunya.cat/Medi-Ambient/Qualitat-de-l-aire-als-punts-de-mesurament-autom-t/tasf-thgu/about\_data} \textbf{$\rightarrow$ Web de dades obertes de la Generalitat de Catalunya. Enllaç al \textit{dataset}.\\
+IMPORTANT: La llicència de la Generalitat especifíca una citació específica de les dades sota la llicència } \newline
+[Ref.3] \textit{Sofcatalà} [en línia] [consulta: 20 de novembre de 2025] Disponible a: \href{https://www.softcatala.org/corrector/}{https://www.softcatala.org/corrector/} \textbf{$\rightarrow$ Corrector d'ortografia.}
+
+\section*{Bibliografia del codi emprat per treballar amb les dades}
+\addcontentsline{toc}{section}{Bibliografia del codi emprat per treballar amb les dades}
+[Ref.Codi.1] \textit{pandas.Series.unique} [en línia] [consulta: 20 de novembre de 2025] Disponible a: \href{https://pandas.pydata.org/docs/reference/api/pandas.Series.unique.html}{https://pandas.pydata.org/docs/reference/api/pandas.Series.unique.html} \textbf{$\rightarrow$ Documentació de la funció per a seleccionar els elements únics d'una sèrie pandas.} \newline
+[Ref.Codi.2] \textit{pandas.Series.to\_list} [en línia] [consulta: 20 de novembre de 2025] Disponible a: \href{https://pandas.pydata.org/docs/reference/api/pandas.Series.to_list.html}{https://pandas.pydata.org/docs/reference/api/pandas.Series.to\_list.html} \textbf{$\rightarrow$ Documentació de la funció per a retornar valors en format llista.} \newline
+[Ref.Codi.3] \textit{Cómo obtener el recuento de filas de un Pandas DataFrame} [en línia] [consulta: 20 de novembre de 2025] Disponible a: \href{https://www.delftstack.com/es/howto/python-pandas/how-to-get-the-row-count-of-a-pandas-dataframe/}{https://www.delftstack.com/es/howto/python-pandas/how-to-get-the-row-count-of-a-pandas-dataframe/} \textbf{$\rightarrow$ Web que explica com obtenir el total de files i el total de columnes d'un dataframe de pandas.} \newline
+[Ref.Codi.4] \textit{pandas.to\_datetime} [en línia] [consulta: 20 de novembre de 2025] Disponible a: \href{https://pandas.pydata.org/docs/reference/api/pandas.to_datetime.html}{https://pandas.pydata.org/docs/reference/api/pandas.to\_datetime.html} \textbf{$\rightarrow$ Documentació de la funció per a convertir un argument a format \textit{datetime}.}
 \end{document}
