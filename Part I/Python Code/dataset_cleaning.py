@@ -54,7 +54,7 @@ df_from_2015_onwards.loc[data_ng, hours] = (
 df_from_2015_onwards["UNITATS"] = f"{mu_unicode}g/m3"
 
 # ------------------------------ Guardar en un csv el dataframe final ------------------------------
-#df_from_2015_onwards.to_csv("df_final.csv", index=False, sep=",", encoding="utf-8") # Bibliografia [Ref.Codi.13]
+df_from_2015_onwards.to_csv("df_final.csv", index=False, sep=",", encoding="utf-8") # Bibliografia [Ref.Codi.13]
 
 # ------------------------------ Mètriques del dataframe final ------------------------------
 info_df_final = dsa.get_dataframe_info(df_from_2015_onwards)
