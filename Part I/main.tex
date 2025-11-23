@@ -18,6 +18,10 @@
 \tableofcontents
 \thispagestyle{empty}
 \newpage
+\thispagestyle{empty}
+\listoftables
+\thispagestyle{empty}
+\newpage
 \pagenumbering{arabic}
 \section*{Justificació de l'elecció del dataset}
 \addcontentsline{toc}{section}{Justificació de l'elecció del dataset}
@@ -29,20 +33,128 @@ Informació bàsica del dataset:
     \item Nombre de files: 3,5 milions $\rightarrow$ Per evitar tractar amb tantes dades s'aplicarà un filtre per no tractar dades més enrere del 2015.
     \item Nombre de columnes: 40
     \item Data de creació de les dades: 18 de març de 2020
-    \item Darrera actualització de les dades: 20 de novembre de 2025
+    \item Darrera actualització de les dades: 17 de novembre de 2025
 \end{itemize}
 És important de cara als aspectes legals destacar que aquest conjunt de dades distribuït pel Departament de Territori, Habitatge i Transició Ecològica de la Generalitat de Catalunya es publica sota la llicència oberta d'ús d'informació - Catalunya.
-
 \section*{Rellevància del conjunt de dades}
 \addcontentsline{toc}{section}{Rellevància del conjunt de dades}
 Les dades escollides per dur a terme la pràctica final de l'assignatura, són dades compreses entre l'1 de gener del 1991 fins al 17 de novembre de 2025 i contenen un total de 40 columnes i 3.502.657 de registres. Per evitar tractar amb dades excessivament antigues, s'aplicarà un filtre al conjunt de dades per no tractar amb dades més enrere de l'any 2015.\\
-Com s'ha esmentat anteriorment, el tema tractat per aquest conjunt de dades, és la contaminació atmosfèrica en el territòri de Catalunya, un fenomen molt important per a la ciutadania catalana, ja que una mala qualitat de l'aire pot derivar en malaties i fins i tot la mort. Concretament, es mesuren els contaminants: $PM_{2.5}$, $NO_{2}$, $NO_{x}$, $O_{3}$, CO, NO, $SO_{2}$, $PM_{10}$, $PM_{1}$, $H_{2}S$, Hg, $C_{6}H_{6}$ i $Cl_{2}$ a cada hora del dia que es realitza la mesura (1 columna per hora).\\
+Com s'ha esmentat anteriorment, el tema tractat per aquest conjunt de dades, és la contaminació atmosfèrica en el territòri de Catalunya, un fenomen molt important per a la ciutadania catalana, ja que una mala qualitat de l'aire pot derivar en malaties i fins i tot la mort.\\
 En aquest context, la perspectiva de gènere no és aplicable.
-
+\section*{Complexitat del dataset}
+\addcontentsline{toc}{section}{Complexitat del dataset}
+Mètriques del conjunt de dades original:
+\begin{itemize}
+    \item Nombre de files: 3.502.657
+    \item Nombre de columnes: 40
+    \item Data de creació de les dades: 18 de març de 2020
+    \item Darrera actualització de les dades: 17 de novembre de 2025
+    \item Regitre més antic: 1 de gener de 1991
+    \item Registre més recent: 17 de novembre de 2025
+    \item Contaminants mesurats: $SO_{2}$, $NO_{2}$, $O_{3}$, $NO_{x}$, $PM_{10}$, NO, $H_{2}S$, CO, $PM_{2.5}$, Hg, $Cl_{2}$, $C_{6}H_{6}$, $PM_{1}$, PS, HCT, HCNM, HCl.
+    \item Unitats de mesura: $\mu g/m^{3}$, $mg/m^{3}$, $ng/m^{3}$, ppm.
+\end{itemize}
+            \begin{longtable}{|c|>{\centering\arraybackslash}p{6cm}|>{\centering\arraybackslash}p{2cm}|}
+                \hline Variable & Descripció & Tipus\\
+                \hline
+                 CODI EOI & Codi assignat pel Ministeri responsable de qualitat de l'aire & Text \\
+                 \hline
+                 NOM ESTACIO & Nom de la cabina & Text \\
+                 \hline
+                 DATA & Data de la mesura & Segell de temps flotant \\
+                 \hline
+                 MAGNITUD & Codi numèric que identifica el contaminant & Nombre\\
+                 \hline
+                 CONTAMINANT & Fórmula del contaminant & Text\\
+                 \hline
+                 UNITATS & Unitats de mesura & Text\\
+                 \hline
+                 TIPUS ESTACIO & Traffic, Background i Industrial & Text\\
+                 \hline
+                 AREA URBANA & Urban, Peri-Urban o suburban i Rural & Text\\
+                 \hline
+                 CODI INE & Codi de 5 dígits del municipi & Text\\
+                 \hline
+                 MUNICIPI & Nom del municpi on es troba la cabina & Text\\
+                 \hline
+                 CODI COMARCA & Codi per identificar la comarca on es troba la cabina & Text\\
+                 \hline
+                 NOM COMARCA & Nom de la comarca on es troba la cabina & Text\\
+                 \hline
+                 01h & Lectura per a l'hora 01 & Nombre\\
+                 \hline
+                 02h & Lectura per a l'hora 02 & Nombre\\
+                 \hline
+                 03h & Lectura per a l'hora 03 & Nombre\\
+                 \hline
+                 04h & Lectura per a l'hora 04 & Nombre\\
+                 \hline
+                 05h & Lectura per a l'hora 05 & Nombre\\
+                 \hline
+                 06h & Lectura per a l'hora 06 & Nombre\\
+                 \hline
+                 07h & Lectura per a l'hora 07 & Nombre\\
+                 \hline
+                 08h & Lectura per a l'hora 08 & Nombre\\
+                 \hline
+                 09h & Lectura per a l'hora 09 & Nombre\\
+                 \hline
+                 10h & Lectura per a l'hora 10 & Nombre\\
+                 \hline
+                 11h & Lectura per a l'hora 11 & Nombre\\
+                 \hline
+                 12h & Lectura per a l'hora 12 & Nombre\\
+                 \hline
+                 13h & Lectura per a l'hora 13 & Nombre\\
+                 \hline
+                 14h & Lectura per a l'hora 14 & Nombre\\
+                 \hline
+                 15h & Lectura per a l'hora 15 & Nombre\\
+                 \hline
+                 16h & Lectura per a l'hora 16 & Nombre\\
+                 \hline
+                 17h & Lectura per a l'hora 17 & Nombre\\
+                 \hline
+                 18h & Lectura per a l'hora 18 & Nombre\\
+                 \hline
+                 19h & Lectura per a l'hora 19 & Nombre\\
+                 \hline
+                 20h & Lectura per a l'hora 20 & Nombre\\
+                 \hline
+                 21h & Lectura per a l'hora 21 & Nombre\\
+                 \hline
+                 22h & Lectura per a l'hora 22 & Nombre\\
+                 \hline
+                 23h & Lectura per a l'hora 23 & Nombre\\
+                 \hline
+                 24h & Lectura per a l'hora 24 & Nombre\\
+                 \hline
+                 ALTITUD & Altitud de l'estació & Nombre \\
+                 \hline
+                 LATITUD & Latitud expressada en graus decimals. Sistema de referència WGS84 & Nombre\\
+                 \hline
+                 LONGITUD & Longitud expressada en graus decimals. Sistema de referència WGS84 & Nombre\\
+                 \hline
+                 Georeferència & Georeferència & Punt\\
+                 \hline
+            \caption{Variables del dataset i els seus tipus}
+            \label{tab:variables}
+            \end{longtable}
+Mètriques del dataset un cop realitzades tasques de neteja de dades i filtratge:
+\begin{itemize}
+    \item Nombre de files: 1.402.163
+    \item Nombre de columnes: 40 (Les mateixes)
+    \item Regitre més antic: 1 de gener de 2015
+    \item Registre més recent: 17 de novembre de 2025
+    \item Contaminants mesurats: $NO_{2}$, $O_{3}$, $NO_{x}$, $PM_{10}$, NO, $H_{2}S$, CO, $PM_{2.5}$, Hg, $Cl_{2}$, $C_{6}H_{6}$, $PM_{1}$, $SO_{2}$.
+    \item Unitats de mesura: $\mu g/m^{3}$.
+\end{itemize}
+Com es pot observar en les mètriques del \textit{dataset} que s'utilitzarà en la segona part de la pràctica, aquest consta de 1.402.163 de files i 40 columnes (les del \textit{dataset} original) que combinen variables numèriques, tipus punt, textuals i de tipus segell de temps flotant. \newline
+Totes les modificacions fetes al dataset (tasques de neteja, imputació, tractament de nuls, etc.), es poden veure al repositòri GitHub: \href{https://github.com/marc7666/PRAC-VD}{\underline{Repositòri de la pràctica}}.
 \section*{Bibliografia}
 \addcontentsline{toc}{section}{Bibliografia}
-[Ref.1] \label{ref:dades_gob_esp} \textit{Calidad del aire en los puntos de medida automáticos de la Red de Vigilancia y Previsión de la Contaminació Atmosférica} [en línia] [consulta: 20 de novembre de 2025] Disponible a: \sloppy\href{https://datos.gob.es/es/catalogo/a09002970-calidad-del-aire-en-los-puntos-de-medida-automaticos-de-la-red-de-vigilancia-y-prevision-de-la-contaminacio-atmosferica}{https://datos.gob.es/es/catalogo/a09002970-calidad-del-aire-en-los-puntos-de-medida-automaticos-de-la-red-de-vigilancia-y-prevision-de-la-contaminacio-atmosferica} \textbf{$\rightarrow$ Repositòri de dades del gobern d'Espanya.} \newline
-[Ref.2] \label{ref:dades_cat} Generalitat de Catalunya. Departament de Territori, Habitatge i Transició Ecològica. Xarxa de Vigilància i Previsió de ka Contaminació Atmosfèrica. [organisme autònom, empresa pública]. \textit{Qualitat de l'aire als punts de mesurament automàtics de la Xarxa de Vigilància i Previsió de la Contaminació Atmosfèrica} [base de dades en línia]. Darrera actualització: [17 de novbembre de 2025]. Llicència Oberta d'Ús d'Informació - Catalunya [consulta: 20 de novembre de 2025]. Disponible a: \href{https://analisi.transparenciacatalunya.cat/Medi-Ambient/Qualitat-de-l-aire-als-punts-de-mesurament-autom-t/tasf-thgu/about_data}{https://analisi.transparenciacatalunya.cat/Medi-Ambient/Qualitat-de-l-aire-als-punts-de-mesurament-autom-t/tasf-thgu/about\_data} \textbf{$\rightarrow$ Web de dades obertes de la Generalitat de Catalunya. Enllaç al \textit{dataset}.\\
+[Ref.1] \label{ref:dades_gob_esp} \textit{Calidad del aire en los puntos de medida automáticos de la Red de Vigilancia y Previsión de la Contaminació Atmosférica} [en línia] [consulta: 17 de novembre de 2025] Disponible a: \sloppy\href{https://datos.gob.es/es/catalogo/a09002970-calidad-del-aire-en-los-puntos-de-medida-automaticos-de-la-red-de-vigilancia-y-prevision-de-la-contaminacio-atmosferica}{https://datos.gob.es/es/catalogo/a09002970-calidad-del-aire-en-los-puntos-de-medida-automaticos-de-la-red-de-vigilancia-y-prevision-de-la-contaminacio-atmosferica} \textbf{$\rightarrow$ Repositòri de dades del gobern d'Espanya.} \newline
+[Ref.2] \label{ref:dades_cat} Generalitat de Catalunya. Departament de Territori, Habitatge i Transició Ecològica. Xarxa de Vigilància i Previsió de ka Contaminació Atmosfèrica. [organisme autònom, empresa pública]. \textit{Qualitat de l'aire als punts de mesurament automàtics de la Xarxa de Vigilància i Previsió de la Contaminació Atmosfèrica} [base de dades en línia]. Darrera actualització: [17 de novbembre de 2025]. Llicència Oberta d'Ús d'Informació - Catalunya [consulta: 17 de novembre de 2025]. Disponible a: \href{https://analisi.transparenciacatalunya.cat/Medi-Ambient/Qualitat-de-l-aire-als-punts-de-mesurament-autom-t/tasf-thgu/about_data}{https://analisi.transparenciacatalunya.cat/Medi-Ambient/Qualitat-de-l-aire-als-punts-de-mesurament-autom-t/tasf-thgu/about\_data} \textbf{$\rightarrow$ Web de dades obertes de la Generalitat de Catalunya. Enllaç al \textit{dataset}.\\
 IMPORTANT: La llicència de la Generalitat especifíca una citació específica de les dades sota la llicència } \newline
 [Ref.3] \textit{Sofcatalà} [en línia] [consulta: 20 de novembre de 2025] Disponible a: \href{https://www.softcatala.org/corrector/}{https://www.softcatala.org/corrector/} \textbf{$\rightarrow$ Corrector d'ortografia.}
 
