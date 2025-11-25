@@ -39,7 +39,6 @@ df_from_2015_onwards["UNITATS"] = df_from_2015_onwards["UNITATS"].replace("ug/m3
 # -- Factors de conversió --
 convert_mili_to_micro = (1.0e-3 / 1.0) * (1.0 / 1.0e-6)  # Convertir a unitat base i d'unitat base a micro
 convert_nano_to_micro = (1.0e-9 / 1.0) * (1.0 / 1.0e-6)  # Convertir a unitat base i d'unitat base a micro
-
 # -- Conversió mili a micro --
 data_mg = df_from_2015_onwards["UNITATS"] == "mg/m3"
 df_from_2015_onwards.loc[data_mg, hours] = (
@@ -48,13 +47,16 @@ df_from_2015_onwards.loc[data_mg, hours] = (
 # -- Conversió nano a micro --
 data_ng = df_from_2015_onwards["UNITATS"] == "ng/m3"
 df_from_2015_onwards.loc[data_ng, hours] = (
-        df_from_2015_onwards.loc[data_ng, hours] * convert_nano_to_micro) # Bibliografia [Ref.Codi.12]
+        df_from_2015_onwards.loc[data_ng, hours] * convert_nano_to_micro)  # Bibliografia [Ref.Codi.12]
 
 # -- Tots els símbols a micrograms per metre cúbic --
 df_from_2015_onwards["UNITATS"] = f"{mu_unicode}g/m3"
 
+# -- peri-urban = suburban --
+df_from_2015_onwards.loc[df_from_2015_onwards["AREA URBANA"] == "peri-urban", "AREA URBANA"] = "suburban"
+
 # ------------------------------ Guardar en un csv el dataframe final ------------------------------
-df_from_2015_onwards.to_csv("df_final.csv", index=False, sep=",", encoding="utf-8") # Bibliografia [Ref.Codi.13]
+df_from_2015_onwards.to_csv("df_final.csv", index=False, sep=",", encoding="utf-8")  # Bibliografia [Ref.Codi.13]
 
 # ------------------------------ Mètriques del dataframe final ------------------------------
 info_df_final = dsa.get_dataframe_info(df_from_2015_onwards)

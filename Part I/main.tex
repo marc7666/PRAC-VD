@@ -54,92 +54,6 @@ Mètriques del conjunt de dades original:
     \item Contaminants mesurats: $SO_{2}$, $NO_{2}$, $O_{3}$, $NO_{x}$, $PM_{10}$, NO, $H_{2}S$, CO, $PM_{2.5}$, Hg, $Cl_{2}$, $C_{6}H_{6}$, $PM_{1}$, PS, HCT, HCNM, HCl.
     \item Unitats de mesura: $\mu g/m^{3}$, $mg/m^{3}$, $ng/m^{3}$, ppm.
 \end{itemize}
-            \begin{longtable}{|c|>{\centering\arraybackslash}p{6cm}|>{\centering\arraybackslash}p{2cm}|}
-                \hline Variable & Descripció & Tipus\\
-                \hline
-                 CODI EOI & Codi assignat pel Ministeri responsable de qualitat de l'aire & Text \\
-                 \hline
-                 NOM ESTACIO & Nom de la cabina & Text \\
-                 \hline
-                 DATA & Data de la mesura & Segell de temps flotant \\
-                 \hline
-                 MAGNITUD & Codi numèric que identifica el contaminant & Nombre\\
-                 \hline
-                 CONTAMINANT & Fórmula del contaminant & Text\\
-                 \hline
-                 UNITATS & Unitats de mesura & Text\\
-                 \hline
-                 TIPUS ESTACIO & Traffic, Background i Industrial & Text\\
-                 \hline
-                 AREA URBANA & Urban, Peri-Urban o suburban i Rural & Text\\
-                 \hline
-                 CODI INE & Codi de 5 dígits del municipi & Text\\
-                 \hline
-                 MUNICIPI & Nom del municpi on es troba la cabina & Text\\
-                 \hline
-                 CODI COMARCA & Codi per identificar la comarca on es troba la cabina & Text\\
-                 \hline
-                 NOM COMARCA & Nom de la comarca on es troba la cabina & Text\\
-                 \hline
-                 01h & Lectura per a l'hora 01 & Nombre\\
-                 \hline
-                 02h & Lectura per a l'hora 02 & Nombre\\
-                 \hline
-                 03h & Lectura per a l'hora 03 & Nombre\\
-                 \hline
-                 04h & Lectura per a l'hora 04 & Nombre\\
-                 \hline
-                 05h & Lectura per a l'hora 05 & Nombre\\
-                 \hline
-                 06h & Lectura per a l'hora 06 & Nombre\\
-                 \hline
-                 07h & Lectura per a l'hora 07 & Nombre\\
-                 \hline
-                 08h & Lectura per a l'hora 08 & Nombre\\
-                 \hline
-                 09h & Lectura per a l'hora 09 & Nombre\\
-                 \hline
-                 10h & Lectura per a l'hora 10 & Nombre\\
-                 \hline
-                 11h & Lectura per a l'hora 11 & Nombre\\
-                 \hline
-                 12h & Lectura per a l'hora 12 & Nombre\\
-                 \hline
-                 13h & Lectura per a l'hora 13 & Nombre\\
-                 \hline
-                 14h & Lectura per a l'hora 14 & Nombre\\
-                 \hline
-                 15h & Lectura per a l'hora 15 & Nombre\\
-                 \hline
-                 16h & Lectura per a l'hora 16 & Nombre\\
-                 \hline
-                 17h & Lectura per a l'hora 17 & Nombre\\
-                 \hline
-                 18h & Lectura per a l'hora 18 & Nombre\\
-                 \hline
-                 19h & Lectura per a l'hora 19 & Nombre\\
-                 \hline
-                 20h & Lectura per a l'hora 20 & Nombre\\
-                 \hline
-                 21h & Lectura per a l'hora 21 & Nombre\\
-                 \hline
-                 22h & Lectura per a l'hora 22 & Nombre\\
-                 \hline
-                 23h & Lectura per a l'hora 23 & Nombre\\
-                 \hline
-                 24h & Lectura per a l'hora 24 & Nombre\\
-                 \hline
-                 ALTITUD & Altitud de l'estació & Nombre \\
-                 \hline
-                 LATITUD & Latitud expressada en graus decimals. Sistema de referència WGS84 & Nombre\\
-                 \hline
-                 LONGITUD & Longitud expressada en graus decimals. Sistema de referència WGS84 & Nombre\\
-                 \hline
-                 Georeferència & Georeferència & Punt\\
-                 \hline
-            \caption{Variables del dataset i els seus tipus}
-            \label{tab:variables}
-            \end{longtable}
 Mètriques del dataset un cop realitzades tasques de neteja de dades i filtratge:
 \begin{itemize}
     \item Nombre de files: 1.402.163
@@ -150,15 +64,126 @@ Mètriques del dataset un cop realitzades tasques de neteja de dades i filtratge
     \item Unitats de mesura: $\mu g/m^{3}$.
 \end{itemize}
 Com es pot observar en les mètriques del \textit{dataset} que s'utilitzarà en la segona part de la pràctica, aquest consta de 1.402.163 de files i 40 columnes (les del \textit{dataset} original) que combinen variables numèriques, de tipus punt, textuals i de tipus segell de temps flotant. \newline
-Totes les modificacions fetes al dataset (tasques de neteja, imputació, tractament de nuls, etc.), es poden veure al repositòri GitHub: \href{https://github.com/marc7666/PRAC-VD}{\underline{Repositòri de la pràctica}}.\newline
 Amb les mètriques del \textit{dataset} netejat i filtrat es considera que el conjunt de dades té una mida i una varietat suficients per a la segona part de la pràctica.
+\section*{Originalitat}
+\addcontentsline{toc}{section}{Originalitat}
+El \textit{dataset} proposat respon al segon escenari proposat de l'enunciat: "Millorar el conjunt de dades". Aquestes millores es poden resumir en 3 grans tasques: Filtratge, tractament de \textit{nulls} i unificació d'unitats de mesura dels contaminants.\newline
+En la tasca de filtratge, en primer lloc, s'ha utilitzat la funció \textit{to\_datetime()} en la columna de dates per transformar el tipus de la columna a \textit{datetime} i posteriorment s'han filtrat les dades eliminant totes aquelles dades anteriors a l'1 de gener de 2015. \newline
+La tasca de tractament de valors \textit{nulls}, ha consistit en tres subtasques la primera de les quals ha estat imputar un valor de 0 a totes aquelles lectures (columnes que indiquen la lectura en una hora del dia. Hi ha una columna per hora) que no tenien cap valor imputat en el conjunt original. En segon lloc, s'han comprovat les columnes 'DATA', 'CONTAMINANT', 'UNITATS', 'TIPUS ESTACIO", 'AREA URBANA', 'ALTITUD', 'LONGITUD' i 'LATITUD' (són les que, juntament amb les lectures de cada hora, ajudaran a respondre les preguntes plantejades) en recerca de valors \textit{null}. En aquest cas, si s'ha trobat algun valor \textit{null}, s'han eliminat els registres. S'ha optat per aquesta opció per tal d'evitar una imputació aleatòria i evitar així possibles biaixos en les posteriors anàlisis de les dades mitjançant visualitzacions.\newline
+Finalment, la tercera subtasca ha consistit a excloure del conjunt de dades aquells registres en els quals totes les lectures dels contaminants són 0, ja que no aporten cap mena d'informació rellevant. \newline
+L'última millora que s'ha dut a terme en el conjunt de dades ha estat l'harmonització d'unitats de mesura dels contaminants. Totes les lectures expressades en $mg/m^{3}$ i $ng/m^{3}$ han estat convertides a $\mu g/m^{3}$. La conversió a $\mu g/m^{3}$ es justifica pel fet que la Comissió Europea utilitza aquesta mesura com a mesura estàndard els micrograms per metre cúbic.\hyperref[ref:ec_aqs]{[Ref.4]}. Cal posar èmfasi en que a partir del 2015 les partícules $PM_{x}$ es troben expressades en $\mu g/m^{3}$ en el conjunt de dades originals i no en $ppm$. \newline
+També s'han modificat els símbols de les unitats a $\mu g/m^{3}$ (aquelles que ho han requerit), establir les àrees \textit{peri-urban} com \textit{suburban} (en el conjunt de dades original hi ha ambdues etiquetes), ja que segons la informació del \textit{dataset} en el web de la Generalitat de Catalunya són el mateix. Finalment, també s'ha modificat la unitat de mesura $ug/m^{3}$ i s'ha expressat com $\mu g/m^{3}$, ja que és el mateix.\newline
+Aquestes accions aplicades sobre el conjunt de dades constitueixen una clara millora d'aquest i permetran, en la segona part de la pràctica, una anàlisi de les dades que amb el conjunt original no haurià estat possible degut a biaixos en els resultats per culpa de diferents unitats de mesura i valors \textit{nulls}.\newline
+El codi emprat per a realitzar totes les modificacions fetes al \textit{dataset}, es poden veure al repositori GitHub: \href{https://github.com/marc7666/PRAC-VD}{\underline{Repositori de la pràctica}}.\newline
+\section*{Qüestions a respondre amb la visualització de dades}
+\addcontentsline{toc}{section}{Qüestions a respondre amb la visualització de dades}
+Després de l'observació de les dades disponibles, s'han plantejat les següents preguntes:
+\begin{itemize}
+    \item Quines comarques tenen els majors nivells de cada contaminant?
+    \item Hi ha diferències entre tipus d'estacions?
+    \item Quines són les hores amb més contaminació? El contaminant és un gas o partícules en suspensió?
+    \item Hi ha alguna relació entre la contaminació i l'altura a la qual es troba l'estació?
+    \item Quin és el contaminant que més varia els seus nivells al llarg del dia?
+\end{itemize}
+Les preguntes plantejades són adequades perquè requereixen que el \textit{dataset}, no contingui valors \textit{nulls}, i totes les lectures dels contaminants estiguin en una sola unitat de mesura. Concretament, totes les lectures es troben mesurades en $\mu g/m^{3}$. D'aquesta manera, es poden comparar estacions, tipus d'estacions, comarques, àrees, diferents hores del dia i diferents contaminants.\newline
+El conjunt de dades original (l'extret del web de la Generalitat) s'empra en una visualització de tipus \textit{Pin Map} on cada pin està colorat segons la qualitat de l'aire i si es fa clic sobre algun d'aquests 'pins', es podran observar tant les dades de les lectures de l'estació com la fitxa tècnica de l'estació. Aquesta visualització es pot visitar en el lloc web indicat en \hyperref[ref:vis-map-cat-aire]{[Ref.5]} \newline
+Diccionari de variables:\newline
+\begin{longtable}{|c|>{\centering\arraybackslash}p{6cm}|>{\centering\arraybackslash}p{2cm}|}
+                \hline Variable & Descripció & Dimensió o Fet d'estudi?\\
+                \hline
+                 CODI EOI & Codi assignat pel Ministeri responsable de qualitat de l'aire & No s'utilitzarà en l'anàlisi \\
+                 \hline
+                 NOM ESTACIO & Nom de la cabina & Dimensió \\
+                 \hline
+                 DATA & Data de la mesura & Dimensió \\
+                 \hline
+                 MAGNITUD & Codi numèric que identifica el contaminant & Dimensió\\
+                 \hline
+                 CONTAMINANT & Fórmula del contaminant & Dimensió\\
+                 \hline
+                 UNITATS & Unitats de mesura & Dimensió\\
+                 \hline
+                 TIPUS ESTACIO & Traffic, Background i Industrial & Dimensió\\
+                 \hline
+                 AREA URBANA & Urban, Peri-Urban o suburban i Rural & Dimensió\\
+                 \hline
+                 CODI INE & Codi de 5 dígits del municipi & No s'utilitzarà en l'anàlisi\\
+                 \hline
+                 MUNICIPI & Nom del municpi on es troba la cabina & Dimensió\\
+                 \hline
+                 CODI COMARCA & Codi per identificar la comarca on es troba la cabina & No s'utilitzarà en l'anàlisi\\
+                 \hline
+                 NOM COMARCA & Nom de la comarca on es troba la cabina & Dimensió\\
+                 \hline
+                 01h & Lectura per a l'hora 01 & Fet d'estudi\\
+                 \hline
+                 02h & Lectura per a l'hora 02 & Fet d'estudi\\
+                 \hline
+                 03h & Lectura per a l'hora 03 & Fet d'estudi\\
+                 \hline
+                 04h & Lectura per a l'hora 04 & Fet d'estudi\\
+                 \hline
+                 05h & Lectura per a l'hora 05 & Fet d'estudi\\
+                 \hline
+                 06h & Lectura per a l'hora 06 & Fet d'estudi\\
+                 \hline
+                 07h & Lectura per a l'hora 07 & Fet d'estudi\\
+                 \hline
+                 08h & Lectura per a l'hora 08 & Fet d'estudi\\
+                 \hline
+                 09h & Lectura per a l'hora 09 & Fet d'estudi\\
+                 \hline
+                 10h & Lectura per a l'hora 10 & Fet d'estudi\\
+                 \hline
+                 11h & Lectura per a l'hora 11 & Fet d'estudi\\
+                 \hline
+                 12h & Lectura per a l'hora 12 & Fet d'estudi\\
+                 \hline
+                 13h & Lectura per a l'hora 13 & Fet d'estudi\\
+                 \hline
+                 14h & Lectura per a l'hora 14 & Fet d'estudi\\
+                 \hline
+                 15h & Lectura per a l'hora 15 & Fet d'estudi\\
+                 \hline
+                 16h & Lectura per a l'hora 16 & Fet d'estudi\\
+                 \hline
+                 17h & Lectura per a l'hora 17 & Fet d'estudi\\
+                 \hline
+                 18h & Lectura per a l'hora 18 & Fet d'estudi\\
+                 \hline
+                 19h & Lectura per a l'hora 19 & Fet d'estudi\\
+                 \hline
+                 20h & Lectura per a l'hora 20 & Fet d'estudi\\
+                 \hline
+                 21h & Lectura per a l'hora 21 & Fet d'estudi\\
+                 \hline
+                 22h & Lectura per a l'hora 22 & Fet d'estudi\\
+                 \hline
+                 23h & Lectura per a l'hora 23 & Fet d'estudi\\
+                 \hline
+                 24h & Lectura per a l'hora 24 & Fet d'estudi\\
+                 \hline
+                 ALTITUD & Altitud de l'estació & Dimensió \\
+                 \hline
+                 LATITUD & Latitud expressada en graus decimals. Sistema de referència WGS84 & Dimensió\\
+                 \hline
+                 LONGITUD & Longitud expressada en graus decimals. Sistema de referència WGS84 & Dimensió\\
+                 \hline
+                 Georeferència & Georeferència & No s'utilitzarà en l'anàlisi\\
+                 \hline
+            \caption{Variables del dataset i els seus tipus}
+            \label{tab:variables}
+            \end{longtable}
+
+
 \section*{Bibliografia}
 \addcontentsline{toc}{section}{Bibliografia}
 [Ref.1] \label{ref:dades_gob_esp} \textit{Calidad del aire en los puntos de medida automáticos de la Red de Vigilancia y Previsión de la Contaminació Atmosférica} [en línia] [consulta: 17 de novembre de 2025] Disponible a: \sloppy\href{https://datos.gob.es/es/catalogo/a09002970-calidad-del-aire-en-los-puntos-de-medida-automaticos-de-la-red-de-vigilancia-y-prevision-de-la-contaminacio-atmosferica}{https://datos.gob.es/es/catalogo/a09002970-calidad-del-aire-en-los-puntos-de-medida-automaticos-de-la-red-de-vigilancia-y-prevision-de-la-contaminacio-atmosferica} \textbf{$\rightarrow$ Repositòri de dades del gobern d'Espanya.} \newline
 [Ref.2] \label{ref:dades_cat} Generalitat de Catalunya. Departament de Territori, Habitatge i Transició Ecològica. Xarxa de Vigilància i Previsió de ka Contaminació Atmosfèrica. [organisme autònom, empresa pública]. \textit{Qualitat de l'aire als punts de mesurament automàtics de la Xarxa de Vigilància i Previsió de la Contaminació Atmosfèrica} [base de dades en línia]. Darrera actualització: [17 de novbembre de 2025]. Llicència Oberta d'Ús d'Informació - Catalunya [consulta: 17 de novembre de 2025]. Disponible a: \href{https://analisi.transparenciacatalunya.cat/Medi-Ambient/Qualitat-de-l-aire-als-punts-de-mesurament-autom-t/tasf-thgu/about_data}{https://analisi.transparenciacatalunya.cat/Medi-Ambient/Qualitat-de-l-aire-als-punts-de-mesurament-autom-t/tasf-thgu/about\_data} \textbf{$\rightarrow$ Web de dades obertes de la Generalitat de Catalunya. Enllaç al \textit{dataset}.\\
 IMPORTANT: La llicència de la Generalitat especifíca una citació específica de les dades sota la llicència } \newline
-[Ref.3] \textit{Sofcatalà} [en línia] [consulta: 20 de novembre de 2025] Disponible a: \href{https://www.softcatala.org/corrector/}{https://www.softcatala.org/corrector/} \textbf{$\rightarrow$ Corrector d'ortografia.}
-
+[Ref.3] \textit{Sofcatalà} [en línia] [consulta: 20 de novembre de 2025] Disponible a: \href{https://www.softcatala.org/corrector/}{https://www.softcatala.org/corrector/} \newline
+[Ref.4] \label{ref:ec_aqs} \textit{EU air quality standards} [en línia] [consulta: 25 de novembre de 2025] Disponible a: \href{https://environment.ec.europa.eu/topics/air/air-quality/eu-air-quality-standards_en}{https://environment.ec.europa.eu/topics/air/air-quality/eu-air-quality-standards\_en} \textbf{$\rightarrow$ Web de la Comissió Europea que explica els estàndards de mesura de la qualitat de l'aire.} \newline
+[Ref.5] \label{ref:vis-map-cat-aire} \textit{Vols saber què respires?} [en línia] [consulta: 25 de novembre de 2025] Disponible a: \href{https://mediambient.gencat.cat/ca/05_ambits_dactuacio/atmosfera/qualitat_de_laire/vols-saber-que-respires/}{https://mediambient.gencat.cat/ca/05\_ambits\_dactuacio/atmosfera/qualitat\_de\_laire/vols-saber-que-respires/} \textbf{$\rightarrow$ Web on es pot veure una visualització creada amb les dades escollides per la pràctica.}
 \section*{Bibliografia del codi emprat per treballar amb les dades}
 \addcontentsline{toc}{section}{Bibliografia del codi emprat per treballar amb les dades}
 [Ref.Codi.1] \textit{pandas.Series.unique} [en línia] [consulta: 20 de novembre de 2025] Disponible a: \href{https://pandas.pydata.org/docs/reference/api/pandas.Series.unique.html}{https://pandas.pydata.org/docs/reference/api/pandas.Series.unique.html} \textbf{$\rightarrow$ Documentació de la funció per a seleccionar els elements únics d'una sèrie pandas.} \newline

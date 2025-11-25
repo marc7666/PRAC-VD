@@ -25,7 +25,7 @@ Llicència del dataset: GENERALITAT DE CATALUNYA. *Llicència d'Ús d'Informaci�
 - Registre més recent: 2025-11-17 00:00:00
 - Contaminants: ['NO2', 'NOX', 'CO', 'NO', 'PM2.5', 'PM10', 'SO2', 'H2S', 'Hg', 'C6H6', 'O3', 'PM1', 'Cl2']
 - Tipus d'estació: ['background', 'traffic', 'industrial']
-- Tipus d'àrees: ['urban', 'suburban', 'peri-urban', 'rural']
+- Tipus d'àrees: ['urban', 'suburban', 'rural']
 - Unitats de mesura de contaminants: ['μg/m3']
 - Total columnes: 40
 - Total registres: 1402163
