@@ -65,3 +65,24 @@ Llicència del dataset: GENERALITAT DE CATALUNYA. *Llicència d'Ús d'Informaci�
 [Ref.Codi.12] -- *pandas.DataFrame.loc* [en línia] [consulta: 23 de novembre de 2025] Disponible a: [https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.loc.html](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.loc.html)
 
 [Ref.Codi.13] -- *pandas.DataFrame.to_csv* [en línia] [consulta: 23 de novembre de 2025] Disponible a: [https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html)
+
+## Part II
+
+### Bibliografia
+
+[Ref.1] -- *GeoJSON-Mapas* [en línia] [consulta: 26 de desembre de 2025] Disponible a: [https://github.com/aariste/GeoJSON-Mapas/tree/master](https://github.com/aariste/GeoJSON-Mapas/tree/master)
+
+[Ref.2] -- *Join Your Data* [en línia] [consulta: 26 de desembre de 2025] Disponible a: [https://help.tableau.com/current/pro/desktop/en-us/joining_tables.htm](https://help.tableau.com/current/pro/desktop/en-us/joining_tables.htm)
+
+[Ref.3] -- *So you want to know how to make a Connected Scatterplot in Tableau?* [en línia] [consulta: 27 de desembre de 2025] Disponible a: [https://www.thedataschool.co.uk/a/ross-easton/so-you-want-to-know-how-to-make-a-connected-scatterplot-in-tableau/](https://www.thedataschool.co.uk/a/ross-easton/so-you-want-to-know-how-to-make-a-connected-scatterplot-in-tableau/)
+
+[Ref.4] -- *Add Trend Lines to a Visualization* [en línia] [consulta: 28 de desembre de 2025] Disponible a: [https://help.tableau.com/current/pro/desktop/en-us/trendlines_add.htm](https://help.tableau.com/current/pro/desktop/en-us/trendlines_add.htm)
+
+[Ref.5] -- *Desviación típica* [en línia] [consulta: 28 de desembre de 2025] Disponible a: [https://es.wikipedia.org/wiki/Desviaci%C3%B3n_t%C3%ADpica](https://es.wikipedia.org/wiki/Desviaci%C3%B3n_t%C3%ADpica)
+
+[Ref.6] -- *Tableau Essentials – Title, Caption & Summary* [en línia] [consulta: 28 de desembre de 2025] Disponible a: [https://interworks.com/blog/2014/07/10/tableau-essentials-title-caption-summary/](https://interworks.com/blog/2014/07/10/tableau-essentials-title-caption-summary/)
+
+[Ref.7] -- *Sort Data in a Visualization* [en línia] [consulta: 28 de desembre de 2025] Disponible a: [https://help.tableau.com/current/pro/desktop/en-us/sortgroup_sorting_computed_howto.htm](https://help.tableau.com/current/pro/desktop/en-us/sortgroup_sorting_computed_howto.htm)
+
+[Ref.8] -- CERVERA ROSELL, Marc. 2025. *PRAC II - VD* [visualització]. Tableau Public [en línia] [consulta: 28 de desembre de 2025]. Disponible a: [https://public.tableau.com/views/PRACII-VD/Mapacoropleticpercomarques?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link](https://public.tableau.com/views/PRACII-VD/Mapacoropleticpercomarques?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+

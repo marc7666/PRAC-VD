@@ -1,0 +1,42 @@
+- Quines comarques tenen els majors nivells de cada contaminant?
+Tipus de gràfic: Mapa cloroplètic per comarques de catalunya 
+Color: Segons la mesura de cada contaminant 
+Element interactiu: Poder seleccionar el contaminant Correcte? 
+Dades: es recollira la mitjana dels ultims 10 anys de cada contaminant. Aquesta serà la lectura a utilitzar en el moment de colorar
+
+- Hi ha diferències entre tipus d'estacions?
+Tipus de gràfic: Dot plot
+Eix x: Nom dels tipus d'estació
+Eix y: Distribució de les lectures (El violin plot ho fa automatic)
+Color: Segons el contaminant
+Element interactiu: Poder seleccionar entre contaminants
+Dades: dades agrupades per tipus d'estació i contaminant.
+
+
+
+- Quines són les hores amb més contaminació? El contaminant és un gas o partícules en suspensió?
+Tipus de gràfic: Connected scatter plot --> 1 linia per contaminant
+Eix x: Hores del dia
+Eix y: Evolució dels contaminants (Lectures)
+Color: 1 color per contaminant
+Element interactiu: Poder seleccionar l'evolució d'un o més contaminants (o tots)
+Dades: Mitjana diaraia de cada hora
+
+
+- Hi ha alguna relació entre la contaminació i l'altura a la qual es troba l'estació?
+Tipus de gràfic: Scatter plot
+Eix x: Altitud
+Eix y: Mitjana d'un dia
+Color: Cada contaminant 1 color
+Element interactiu: Poder seleccionar el contaminant a observar en el gràfic (o tots)
+Dades: Mitjanes de cada dia
+
+
+
+- Quin és el contaminant que més varia els seus nivells al llarg del dia?
+Tipus de gràfic: Bar plot
+Eix x: Nom del contaminant
+Eix y: Desviació típica de les lectures al llarg de 24 hores
+Color: 1 color per contaminant
+Element interactiu: -
+Dades: Desviació típica de les lectures de cada hora
