@@ -84,5 +84,5 @@ Llicència del dataset: GENERALITAT DE CATALUNYA. *Llicència d'Ús d'Informaci�
 
 [Ref.7] -- *Sort Data in a Visualization* [en línia] [consulta: 28 de desembre de 2025] Disponible a: [https://help.tableau.com/current/pro/desktop/en-us/sortgroup_sorting_computed_howto.htm](https://help.tableau.com/current/pro/desktop/en-us/sortgroup_sorting_computed_howto.htm)
 
-[Ref.8] -- CERVERA ROSELL, Marc. 2025. *PRAC II - VD* [visualització]. Tableau Public [en línia] [consulta: 28 de desembre de 2025]. Disponible a: [https://public.tableau.com/views/PRACII-VD/Mapacoropleticpercomarques?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link](https://public.tableau.com/views/PRACII-VD/Mapacoropleticpercomarques?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+[Ref.8] -- CERVERA ROSELL, Marc. 2025. *PRAC II - VD* [visualització]. Tableau Public [en línia] [consulta: 28 de desembre de 2025]. Disponible a: [https://public.tableau.com/views/PRACII-VD/Dashboardpresentaci?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link](https://public.tableau.com/views/PRACII-VD/Dashboardpresentaci?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
